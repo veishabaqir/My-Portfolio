@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veisha Baqir - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Subtle background pattern for visual texture */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F172A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zm0-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 60px 60px;
+            background-color: #0F172A; /* Fallback for gradient */
+        }
+        /* Custom animation for content fade-in */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-fadeInScale {
+            animation: fadeInScale 0.7s ease-out forwards;
+        }
+
+        /* Animation for text elements */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slideInUp {
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        /* Hover effect for main content box */
+        .main-content-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white antialiased min-h-screen flex flex-col">
+    <nav class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-teal-400 rounded-md p-2 hover:bg-gray-700 transition duration-300">Veisha Baqir</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">
+                    &larr; Back to Home
+                </a>
+                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">About</a>
+                <a href="skills.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Skills</a>
+                <a href="projects.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Projects</a>
+                <a href="contact.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow py-16 px-4">
+        <div class="container mx-auto max-w-3xl bg-gradient-to-br from-gray-900 to-black p-10 rounded-2xl shadow-xl border border-gray-700 animate-fadeInScale main-content-box transition-all duration-300">
+            <h1 class="text-5xl font-extrabold text-white mb-10 text-center border-b-4 pb-4 border-teal-400 animate-slideInUp" style="animation-delay: 0.2s;">Get In Touch</h1>
+
+            <p class="text-lg text-gray-300 mb-8 text-center animate-slideInUp" style="animation-delay: 0.4s;">
+                I'm always open to new opportunities, collaborations, and interesting conversations.
+                Feel free to reach out through the contact information below.
+            </p>
+
+            <div class="flex justify-center">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-2xl font-semibold text-white mb-4 text-center animate-slideInUp" style="animation-delay: 0.6s;">Contact Information</h2>
+                    <ul class="space-y-4 text-gray-300 text-center">
+                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 0.8s;">
+                            <svg class="w-6 h-6 text-teal-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:veishabaqir@gmail.com" class="hover:text-teal-300">veishabaqir@gmail.com</a>
+                        </li>
+                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 1.0s;">
+                            <svg class="w-6 h-6 text-teal-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.5a2.5 2.5 0 01-5 0V12"></path></svg>
+                            <a href="http://linkedin.com/in/veisha-bakir-aa794130a" target="_blank" class="hover:text-teal-300">LinkedIn/veisha-bakir-aa794130a</a>
+                        </li>
+                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 1.2s;">
+                            <svg class="w-6 h-6 text-teal-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="https://github.com/veishabaqir" target="_blank" class="hover:text-teal-300">GitHub/veishabaqir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center text-sm">
+        <div class="container mx-auto">
+            &copy; 2025 Veisha Baqir. All rights reserved.
+            <div class="mt-2 space-x-4">
+                <a href="https://github.com/veishabaqir" class="hover:text-teal-300 transition duration-300">GitHub</a>
+                <a href="http://linkedin.com/in/veisha-bakir-aa794130a" class="hover:text-teal-300 transition duration-300">LinkedIn</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

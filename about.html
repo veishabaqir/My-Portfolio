@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veisha Baqir - About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Subtle background pattern for visual texture */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F172A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zm0-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 60px 60px;
+            background-color: #0F172A; /* Fallback for gradient */
+        }
+        /* Custom animation for content fade-in */
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-fadeInScale {
+            animation: fadeInScale 0.7s ease-out forwards;
+        }
+
+        /* Animation for text elements */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slideInUp {
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        /* Hover effect for main content box */
+        .main-content-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white antialiased min-h-screen flex flex-col">
+    <nav class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-teal-400 rounded-md p-2 hover:bg-gray-700 transition duration-300">Veisha Baqir</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">
+                    &larr; Back to Home
+                </a>
+                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">About</a>
+                <a href="skills.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Skills</a>
+                <a href="projects.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Projects</a>
+                <a href="contact.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow py-16 px-4">
+        <div class="container mx-auto max-w-4xl bg-gradient-to-br from-gray-900 to-black p-10 rounded-2xl shadow-xl border border-gray-700 animate-fadeInScale main-content-box transition-all duration-300">
+            <h1 class="text-5xl font-extrabold text-white mb-10 text-center border-b-4 pb-4 border-teal-400 animate-slideInUp" style="animation-delay: 0.2s;">About Me</h1>
+
+            <div class="grid grid-cols-1 gap-10 items-center">
+                <div class="text-lg text-gray-300 leading-relaxed space-y-6">
+                    <p class="animate-slideInUp" style="animation-delay: 0.4s;">
+                        Hello! I'm <span class="font-bold text-teal-400">Veisha Baqir</span>, a passionate and dedicated Mathematics Student. My academic journey has instilled in me a strong foundation in analytical thinking, complex problem-solving, and logical reasoning, skills which I eagerly apply to real-world challenges.
+                    </p>
+                    <p class="animate-slideInUp" style="animation-delay: 0.6s;">
+                        My interest extends beyond theoretical concepts; I am fascinated by how mathematical principles underpin various technological innovations, from algorithms to data structures. I thrive on building innovative solutions and constantly learning new technologies to bridge the gap between abstract mathematics and practical application.
+                    </p>
+                    <p class="animate-slideInUp" style="animation-delay: 0.8s;">
+                        I am proficient in <span class="font-semibold text-teal-300">Python</span> for scripting and data manipulation, and skilled in <span class="font-semibold text-teal-300">Excel, Dashboards, Power Pivot, and Power Query</span> for robust data analysis and visualization. These tools allow me to translate complex data into clear, actionable insights.
+                    </p>
+                    <p class="animate-slideInUp" style="animation-delay: 1.0s;">
+                        Outside of my studies and technical pursuits, I enjoy [mention a hobby or two, e.g., reading, coding challenges, playing chess]. I believe in continuous self-improvement and leveraging my mathematical foundation to make a positive impact in the world.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h2 class="text-4xl font-extrabold text-white mb-6 animate-slideInUp" style="animation-delay: 1.2s;">My Philosophy</h2>
+                <p class="text-xl text-gray-200 italic max-w-2xl mx-auto p-4 bg-gray-800 rounded-lg shadow-inner border border-gray-600 animate-slideInUp" style="animation-delay: 1.4s;">
+                    "Mathematics is the language of the universe, and through its principles, we can unlock endless possibilities in technology and beyond. I strive to use this language to build meaningful solutions and contribute to innovation."
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center text-sm">
+        <div class="container mx-auto">
+            &copy; 2025 Veisha Baqir. All rights reserved.
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-teal-300 transition duration-300">GitHub</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">LinkedIn</a>
+                <a href="#" class="hover:text-teal-300 transition duration-300">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
