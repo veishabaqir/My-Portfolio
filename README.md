@@ -51,9 +51,8 @@ To run this portfolio locally on your machine, follow these simple steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/veishabaqir/your-portfolio-repo.git](https://github.com/veishabaqir/your-portfolio-repo.git)
+    git clone [https://github.com/veishabaqir/My-Portfolio.git](https://github.com/veishabaqir/My-Portfolio.git)
     ```
-    *(Replace `your-portfolio-repo` with the actual name of your GitHub repository)*
 2.  **Navigate into the project directory:**
     ```bash
     cd your-portfolio-repo/Portfolio
@@ -67,6 +66,6 @@ I'm always open to new opportunities, collaborations, and discussions. Feel free
 
 * **GitHub:** [https://github.com/veishabaqir](https://github.com/veishabaqir)
 * **LinkedIn:** [http://linkedin.com/in/veisha-bakir-aa794130a](http://linkedin.com/in/veisha-bakir-aa794130a)
-* **Email:** [veishabaqir@gmail.com]
+* **Email:** veishabaqir@gmail.com
 
 ---
