@@ -1,256 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veisha Baqir - Contact</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0A101C; /* Even darker base */
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231F2937' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zM6-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 60px 60px;
-            overflow-x: hidden; /* Prevents horizontal scroll */
-            position: relative;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veisha Baqir - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F172A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zm0-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 60px 60px;
+      background-color: #0F172A;
+    }
 
-        /* Gradient Overlay on Body for depth */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at top left, rgba(20, 184, 166, 0.03), transparent 30%),
-                        radial-gradient(circle at bottom right, rgba(55, 65, 81, 0.03), transparent 30%);
-            pointer-events: none; /* Allows clicks to pass through */
-            z-index: 0;
-        }
+    /* Fade & Slide Animations */
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeInScale { animation: fadeInScale 0.7s ease-out forwards; }
 
-        /* Custom animation for content fade-in */
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .animate-fadeInScale {
-            animation: fadeInScale 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Smoother curve */
-        }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slideInUp { animation: slideInUp 0.8s ease-out forwards; }
 
-        /* Animation for text elements */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-slideInUp {
-            animation: slideInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
+    /* Main Content Box */
+    .main-content-box {
+      background: linear-gradient(to-br, #1F2937, #0F172A);
+      border: 1px solid rgba(55,65,81,0.5);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),
+                  0 10px 10px -5px rgba(0,0,0,0.04);
+      padding: 2.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    .main-content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 30px rgba(20,184,166,0.4);
+      border-color: #14B8A6;
+    }
 
-        /* Main Content Box Styling - Enhanced */
-        .main-content-box {
-            background: linear-gradient(145deg, #1A202C 0%, #0F172A 100%); /* Deeper, more interesting gradient */
-            border: 1px solid rgba(55, 65, 81, 0.6); /* Lighter, subtle border */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Stronger, deeper shadow */
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition */
-            position: relative;
-            z-index: 10; /* Ensure it's above body pseudo-element */
-            overflow: hidden;
-            border-radius: 1.5rem; /* More rounded */
-        }
-        .main-content-box::before { /* Subtle radial glow on hover */
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(20, 184, 166, 0.07), transparent 70%); /* Teal glow */
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-            z-index: -1;
-        }
-        .main-content-box:hover::before {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .main-content-box:hover {
-            transform: translateY(-15px) scale(1.008); /* More lift */
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); /* Even stronger shadow */
-            border-color: #14B8A6; /* Teal border on hover */
-        }
+    /* Heading */
+    h1 {
+      color: #FFFFFF;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 4px solid #14B8A6;
+      padding-bottom: 0.5rem;
+    }
+    p.lead {
+      color: #D1D5DB;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
 
-        /* Social Icon Styling - Colored, Prominent, and with Advanced Hover Effect */
-        .social-link {
-            position: relative;
-            display: inline-flex; /* Use inline-flex for proper alignment and hover area */
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 0; /* Add padding for a larger click area */
-            text-decoration: none; /* Remove underline */
-            color: inherit; /* Inherit text color */
-            overflow: hidden; /* For shine effect */
-            border-radius: 0.5rem; /* Slight border radius for each link */
-            transition: background-color 0.3s ease;
-        }
+    /* Social Icon Styling */
+    .social-link {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      color: inherit;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .social-link i {
+      font-size: 2rem;
+      margin-right: 0.75rem;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .social-link:hover i {
+      transform: scale(1.2) rotate(5deg);
+      filter: brightness(1.3) drop-shadow(0 0 10px rgba(255,255,255,0.2));
+    }
+    .fa-envelope { color: #D44638; }
+    .fa-linkedin { color: #0A66C2; }
+    .fa-github   { color: #FFFFFF; }
+    .fa-medium   { color: #FFFFFF; }
 
-        .social-link i {
-            font-size: 2.5rem; /* Significantly increased size for main section icons */
-            width: 40px; /* Ensure consistent width */
-            height: 40px; /* Ensure consistent height */
-            display: inline-flex; /* To center icon better */
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease-in-out; /* Smoother transitions */
-            text-shadow: 0 0 8px rgba(0,0,0,0.4); /* Subtle text shadow for icons */
-        }
-
-        /* Specific colors for each icon */
-        .fa-envelope { color: #D44638; /* Google Red for email */ }
-        .fa-linkedin { color: #0A66C2; /* LinkedIn Blue */ }
-        .fa-github { color: #FFFFFF; /* GitHub white for dark theme */ }
-        .fa-medium { color: #FFFFFF; /* Medium white for dark theme */ }
-
-        .social-link:hover i {
-            transform: scale(1.25) rotate(5deg); /* More pronounced pop and slight rotate */
-            filter: brightness(1.3) drop-shadow(0 0 10px rgba(255,255,255,0.2)); /* Brighter with subtle glow */
-        }
-
-        /* Shine effect on hover for social links */
-        .social-link::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 0;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(45deg);
-            transition: width 0.5s ease-out;
-            z-index: 1;
-        }
-        .social-link:hover::after {
-            width: 200%;
-        }
-
-
-        /* Footer Social Icon Styling */
-        .footer-social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem; /* Space between icon and text */
-            color: #CBD5E0; /* Default text color for footer links */
-            transition: color 0.3s ease;
-        }
-        .footer-social-link i {
-            font-size: 1.75rem; /* Increased size for footer icons */
-            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-        }
-        .footer-social-link:hover {
-            color: #E2E8F0; /* Lighter text on hover */
-        }
-        .footer-social-link:hover i {
-            transform: scale(1.15); /* Slight pop in footer */
-            filter: brightness(1.2); /* Slightly brighter on hover */
-        }
-
-        /* Heading animations */
-        h1.animate-slideInUp {
-            text-shadow: 0 0 15px rgba(20, 184, 166, 0.6); /* Glow for main title */
-        }
-    </style>
+    /* Footer Social Icons */
+    .footer-social-link i {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .footer-social-link:hover i {
+      transform: scale(1.15);
+      filter: brightness(1.2);
+    }
+  </style>
 </head>
-<body class="text-white antialiased min-h-screen flex flex-col">
-    <nav class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold text-teal-400 rounded-md p-2 hover:bg-gray-700 transition duration-300">Veisha Baqir</a>
-            <div class="space-x-4">
-                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-                    &larr; Back to Home
-                </a>
-                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Home</a>
-                <a href="about.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">About</a>
-                <a href="skills.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Skills</a>
-                <a href="projects.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Projects</a>
-                <a href="contact.html" class="text-teal-300 font-bold px-3 py-2 rounded-md bg-gray-700 transition duration-300">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white antialiased min-h-screen flex flex-col">
 
-    <main class="flex-grow py-16 px-4 flex items-center justify-center">
-        <div class="container mx-auto max-w-3xl p-10 rounded-2xl animate-fadeInScale main-content-box">
-            <h1 class="text-5xl font-extrabold text-white mb-10 text-center border-b-4 pb-4 border-teal-400 animate-slideInUp" style="animation-delay: 0.2s;">Get In Touch</h1>
+  <!-- NAVBAR -->
+  <nav class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-extrabold text-teal-400 p-2 hover:bg-gray-700 rounded-md transition">Veisha Baqir</a>
+      <div class="space-x-4">
+        <a href="index.html" class="text-gray-300 hover:text-teal-300 px-3 py-2 rounded-md transition">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-teal-300 px-3 py-2 rounded-md transition">About</a>
+        <a href="skills.html" class="text-gray-300 hover:text-teal-300 px-3 py-2 rounded-md transition">Skills</a>
+        <a href="projects.html" class="text-gray-300 hover:text-teal-300 px-3 py-2 rounded-md transition">Projects</a>
+        <a href="contact.html" class="text-teal-300 font-bold px-3 py-2 bg-gray-700 rounded-md transition">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-            <p class="text-lg text-gray-300 mb-8 text-center animate-slideInUp" style="animation-delay: 0.4s;">
-                I'm always open to new opportunities, collaborations, and interesting conversations.
-                Feel free to reach out through the contact information below.
-            </p>
+  <!-- MAIN CONTACT SECTION -->
+  <main class="flex-grow flex items-center justify-center py-16 px-4">
+    <div class="container mx-auto max-w-3xl main-content-box animate-fadeInScale animate-slideInUp">
+      <h1>Get In Touch</h1>
+      <p class="lead">
+        I'm always open to new opportunities, collaborations, and interesting conversations.
+        Feel free to reach out through the contact information below.
+      </p>
+      <ul class="space-y-6">
+        <li class="flex items-center justify-center">
+          <a href="mailto:veishabaqir@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+            <span>veishabaqir@gmail.com</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="https://linkedin.com/in/veisha-bakir-aa794130a" target="_blank" class="social-link">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn / veisha-bakir-aa794130a</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="https://github.com/veishabaqir" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub / veishabaqir</span>
+          </a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a href="https://medium.com/@veishabakir" target="_blank" class="social-link">
+            <i class="fab fa-medium"></i>
+            <span>Medium / @veishabakir</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-            <div class="flex justify-center">
-                <div class="w-full md:w-2/3">
-                    <h2 class="text-2xl font-semibold text-white mb-6 text-center animate-slideInUp" style="animation-delay: 0.6s;">Contact Information</h2>
-                    <ul class="space-y-6 text-gray-300 text-center">
-                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 0.8s;">
-                            <a href="mailto:veishabaqir@gmail.com" class="hover:text-teal-300 flex items-center social-link group">
-                                <i class="fas fa-envelope mr-4" aria-hidden="true"></i>
-                                <span class="text-xl group-hover:text-white transition duration-300">veishabaqir@gmail.com</span>
-                            </a>
-                        </li>
-                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 1.0s;">
-                            <a href="http://linkedin.com/in/veisha-bakir-aa794130a" target="_blank" class="hover:text-teal-300 flex items-center social-link group">
-                                <i class="fab fa-linkedin mr-4" aria-hidden="true"></i>
-                                <span class="text-xl group-hover:text-white transition duration-300">LinkedIn/veisha-bakir-aa794130a</span>
-                            </a>
-                        </li>
-                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 1.2s;">
-                            <a href="https://github.com/veishabaqir" target="_blank" class="hover:text-teal-300 flex items-center social-link group">
-                                <i class="fab fa-github mr-4" aria-hidden="true"></i>
-                                <span class="text-xl group-hover:text-white transition duration-300">GitHub/veishabaqir</span>
-                            </a>
-                        </li>
-                        <li class="flex items-center justify-center animate-slideInUp" style="animation-delay: 1.4s;">
-                            <a href="https://medium.com/@veishabakir" target="_blank" class="hover:text-teal-300 flex items-center social-link group">
-                                <i class="fab fa-medium mr-4" aria-hidden="true"></i>
-                                <span class="text-xl group-hover:text-white transition duration-300">Medium/@veishabakir</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white p-6 text-center text-sm">
+    <div class="container mx-auto">
+      &copy; 2025 Veisha Baqir. All rights reserved.
+      <div class="mt-4 space-x-6 flex justify-center">
+        <a href="https://github.com/veishabaqir" class="footer-social-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/veisha-bakir-aa794130a" class="footer-social-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://medium.com/@veishabakir" class="footer-social-link">
+          <i class="fab fa-medium"></i> Medium
+        </a>
+      </div>
+    </div>
+  </footer>
 
-    <footer class="bg-gray-800 text-white p-6 text-center text-sm shadow-inner mt-8">
-        <div class="container mx-auto">
-            &copy; 2025 Veisha Baqir. All rights reserved.
-            <div class="mt-3 space-x-6 flex justify-center items-center">
-                <a href="https://github.com/veishabaqir" class="text-gray-400 hover:text-teal-300 transition duration-300 footer-social-link">
-                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
-                </a>
-                <a href="http://linkedin.com/in/veisha-bakir-aa794130a" class="text-gray-400 hover:text-teal-300 transition duration-300 footer-social-link">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-                </a>
-                <a href="https://medium.com/@veishabakir" class="text-gray-400 hover:text-teal-300 transition duration-300 footer-social-link">
-                    <i class="fab fa-medium" aria-hidden="true"></i> Medium
-                </a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

@@ -1,251 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veisha Baqir - Skills</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0F172A; /* Dark blue-gray */
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231F2937' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zm0-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 60px 60px;
-            overflow-x: hidden; /* Prevents horizontal scroll */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veisha Baqir - Skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F172A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h4v-4h2v-2zm0-20v-4h-2v4H0v2h2v4h4v-4h2v-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 60px 60px;
+      background-color: #0F172A;
+    }
 
-        /* Custom animation for content fade-in */
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .animate-fadeInScale {
-            animation: fadeInScale 0.7s ease-out forwards;
-        }
+    /* Fade & Slide Animations */
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeInScale { animation: fadeInScale 0.7s ease-out forwards; }
 
-        /* Animation for text elements */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-slideInUp {
-            animation: slideInUp 0.8s ease-out forwards;
-        }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slideInUp { animation: slideInUp 0.8s ease-out forwards; }
 
-        /* Main Content Box Styling - Enhanced */
-        .main-content-box {
-            background: linear-gradient(135deg, #1F2937 0%, #0F172A 100%); /* Deeper, more interesting gradient */
-            border: 1px solid rgba(55, 65, 81, 0.5); /* Lighter, subtle border */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger initial shadow */
-            transition: all 0.4s ease-in-out;
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
-        }
-        .main-content-box::before { /* Subtle radial glow on hover */
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(20, 184, 166, 0.05), transparent 70%); /* Teal glow */
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            z-index: -1;
-        }
-        .main-content-box:hover::before {
-            opacity: 1;
-            transform: scale(1);
-        }
-        .main-content-box:hover {
-            transform: translateY(-10px) scale(1.005); /* More lift */
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); /* Even stronger shadow */
-            border-color: #14B8A6; /* Teal border on hover */
-        }
+    /* Main Content Box */
+    .main-content-box {
+      background: linear-gradient(to-br, #1F2937, #0F172A);
+      border: 1px solid rgba(55,65,81,0.5);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),
+                  0 10px 10px -5px rgba(0,0,0,0.04);
+      padding: 2.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    .main-content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),
+                  0 10px 10px -5px rgba(0,0,0,0.04);
+    }
 
-        /* Skill Card Styling - Enhanced */
-        .skill-card {
-            background-color: #1A202C; /* Darker background for cards */
-            border: 1px solid #374151; /* Subtle border */
-            transition: all 0.4s ease-in-out; /* Slower, smoother transition */
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.75rem; /* rounded-lg from Tailwind */
-            padding: 1.75rem; /* Slightly more padding */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper initial shadow */
-        }
-        .skill-card::after { /* Bottom border glow effect */
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px; /* Thickness of the glow */
-            background: linear-gradient(to right, transparent, #14B8A6, transparent); /* Teal gradient */
-            transform: scaleX(0);
-            transition: transform 0.4s ease-out;
-            transform-origin: center;
-        }
-        .skill-card:hover::after {
-            transform: scaleX(1);
-        }
-        .skill-card:hover {
-            transform: translateY(-8px) scale(1.01); /* Lift and slight scale */
-            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5); /* Even deeper shadow */
-            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%); /* Subtle gradient change on hover */
-            border-color: #0D9488; /* Darker teal border */
-        }
+    /* Skill Cards */
+    .skill-card {
+      background: linear-gradient(to-br, #1F2937, #0F172A);
+      border: 1px solid rgba(55,65,81,0.5);
+      border-radius: 1rem;
+      padding: 1.75rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover { transform: translateY(-6px); }
 
-        /* Style for skill items with logos - Enhanced */
-        .skill-item {
-            display: flex;
-            align-items: center;
-            font-size: 1.15rem; /* Slightly larger text */
-            color: #CBD5E0; /* Lighter gray for text */
-            transition: all 0.25s ease-in-out;
-            cursor: pointer;
-            padding: 0.5rem 0; /* Add some vertical padding */
-        }
-        .skill-item img,
-        .skill-item svg.skill-icon { /* Apply styles to img and custom svg-logo class */
-            width: 38px; /* Slightly larger logos */
-            height: 38px;
-            margin-right: 1.25rem; /* More space */
-            object-fit: contain;
-            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4)); /* Subtle shadow for logos */
-            transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
-            flex-shrink: 0; /* Prevent SVG from shrinking */
-        }
-        .skill-item:hover {
-            color: #E2E8F0; /* Even lighter text on hover */
-            transform: translateX(10px); /* More pronounced slide */
-        }
-        .skill-item:hover img,
-        .skill-item:hover svg.skill-icon {
-            transform: scale(1.15) rotate(5deg); /* Logo pops and rotates slightly */
-            filter: drop-shadow(0 4px 4px rgba(0,0,0,0.6)); /* Stronger shadow on hover */
-        }
-
-        .skill-category-title {
-            color: #14B8A6; /* Tailwind teal-500 */
-            text-shadow: 0px 0px 8px rgba(20, 184, 166, 0.4); /* Subtle glow for titles */
-            border-bottom: 2px solid #0D9488; /* Darker teal line */
-            padding-bottom: 0.75rem;
-            margin-bottom: 1.5rem; /* More space below title */
-        }
-    </style>
+    /* Titles & Items */
+    .skill-category-title {
+      color: #14B8A6;
+      font-size: 1.75rem;
+      border-bottom: 2px solid #14B8A6;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+      color: #e5e7eb;
+      font-size: 1.1rem;
+    }
+    .skill-item img,
+    .skill-icon {
+      width: 44px;
+      height: 44px;
+    }
+  </style>
 </head>
-<body class="text-white antialiased min-h-screen flex flex-col">
-    <nav class="bg-gray-800 shadow-lg p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold text-teal-400 rounded-md p-2 hover:bg-gray-700 transition duration-300">Veisha Baqir</a>
-            <div class="space-x-4">
-                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-                    &larr; Back to Home
-                </a>
-                <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Home</a>
-                <a href="about.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">About</a>
-                <a href="skills.html" class="text-teal-300 font-bold px-3 py-2 rounded-md bg-gray-700 transition duration-300">Skills</a>
-                <a href="projects.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Projects</a>
-                <a href="contact.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact</a>
-            </div>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white antialiased min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <nav class="bg-gray-800 shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-extrabold text-teal-400 rounded-md p-2 hover:bg-gray-700 transition duration-300">Veisha Baqir</a>
+      <div class="space-x-4">
+        <a href="index.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Home</a>
+        <a href="about.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">About</a>
+        <a href="skills.html" class="text-teal-300 font-bold px-3 py-2 rounded-md bg-gray-700 transition duration-300">Skills</a>
+        <a href="projects.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Projects</a>
+        <a href="contact.html" class="text-gray-300 hover:text-teal-300 font-medium px-3 py-2 rounded-md hover:bg-gray-700 transition duration-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN SKILLS SECTION -->
+  <main class="flex-grow flex items-center justify-center py-16 px-4">
+    <div class="container mx-auto max-w-5xl main-content-box animate-fadeInScale">
+      <h1 class="text-5xl font-extrabold text-white mb-10 text-center border-b-4 pb-4 border-teal-400 animate-slideInUp" style="animation-delay: 0.2s;">My Skills</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Programming & Web Development -->
+        <div class="skill-card animate-slideInUp" style="animation-delay: 0.4s;">
+          <h2 class="skill-category-title">Programming &amp; Web Development</h2>
+          <ul>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo"> Python
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo"> HTML
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo"> CSS
+            </li>
+          </ul>
         </div>
-    </nav>
 
-    <main class="flex-grow py-16 px-4">
-        <div class="container mx-auto max-w-5xl p-10 rounded-2xl animate-fadeInScale main-content-box">
-            <h1 class="text-5xl font-extrabold text-white mb-10 text-center border-b-4 pb-4 border-teal-400 animate-slideInUp" style="animation-delay: 0.2s;">My Skills</h1>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="animate-slideInUp skill-card" style="animation-delay: 0.4s;">
-                    <h2 class="text-3xl font-bold skill-category-title">Programming & Web Development</h2>
-                    <ul class="list-none space-y-3">
-                        <li class="skill-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo">
-                            Python
-                        </li>
-                        <li class="skill-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo">
-                            HTML
-                        </li>
-                        <li class="skill-item">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo">
-                            CSS
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="animate-slideInUp skill-card" style="animation-delay: 0.6s;">
-                    <h2 class="text-3xl font-bold skill-category-title">Data & Productivity Tools</h2>
-                    <ul class="list-none space-y-3">
-                        <li class="skill-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel Logo">
-                            Microsoft Excel (incl. Dashboards & Document Creation)
-                        </li>
-                        <li class="skill-item">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="MS PowerPoint Logo">
-                            MS PowerPoint
-                        </li>
-                        <li class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="4" ry="4" fill="#672F77"/>
-                                <path d="M12 5H7C6.44772 5 6 5.44772 6 6V18C6 18.5523 6.44772 19 7 19H17C17.5523 19 18 18.5523 18 18V9L12 5Z" fill="#8F3F9F"/>
-                                <path d="M17 9H12V5L17 9Z" fill="#C065D3"/>
-                                <path d="M8 8H16V10H8V8Z" fill="#FFFFFF"/>
-                                <path d="M8 12H16V14H8V12Z" fill="#FFFFFF"/>
-                                <path d="M8 16H16V18H8V16Z" fill="#FFFFFF"/>
-                            </svg>
-                            Power Pivot
-                        </li>
-                        <li class="skill-item">
-                            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="4" ry="4" fill="#00A19C"/>
-                                <path d="M12 5C7.02944 5 3 9.02944 3 14H21C21 9.02944 16.9706 5 12 5Z" fill="#00C0BA"/>
-                                <path d="M12 5V22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M5 12H19" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="12" cy="14" r="3" fill="#FFFFFF"/>
-                                <path d="M16 11L18 9M16 11L14 9M16 11V13" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 17L10 19M8 17L6 19M8 17V15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            Power Query
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Data & Office Tools -->
+        <div class="skill-card animate-slideInUp" style="animation-delay: 0.6s;">
+          <h2 class="skill-category-title">Data &amp; Office Tools</h2>
+          <ul>
+            <li class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel Logo">
+              Microsoft Excel (including Dashboard Design)
+            </li>
+            <li class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="PowerPoint Logo">
+              PowerPoint
+            </li>
+            <li class="skill-item">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="4" ry="4" fill="#00A19C"/>
+                <path d="M12 5C7.02944 5 3 9.02944 3 14H21C21 9.02944 16.9706 5 12 5Z" fill="#00C0BA"/>
+                <path d="M12 5V22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5 12H19" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="14" r="3" fill="#FFFFFF"/>
+                <path d="M16 11L18 9M16 11L14 9M16 11V13" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 17L10 19M8 17L6 19M8 17V15" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Power BI
+            </li>
+          </ul>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <footer class="bg-gray-800 text-white p-6 text-center text-sm shadow-inner mt-8">
-        <div class="container mx-auto">
-            &copy; 2025 Veisha Baqir. All rights reserved.
-            <div class="mt-3 space-x-4">
-                <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 flex items-center justify-center gap-1 inline-block">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-5 h-5 mr-1"> GitHub
-                </a>
-                <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 flex items-center justify-center gap-1 inline-block">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-5 h-5 mr-1"> LinkedIn
-                </a>
-                <a href="#" class="text-gray-400 hover:text-teal-300 transition duration-300 flex items-center justify-center gap-1 inline-block">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" class="w-5 h-5 mr-1"> Twitter
-                </a>
-            </div>
-        </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white p-6 text-center text-sm">
+    <div class="container mx-auto">
+      &copy; 2025 Veisha Baqir. All rights reserved.
+      <div class="mt-2 space-x-4">
+        <a href="#" class="hover:text-teal-300 transition duration-300">GitHub</a>
+        <a href="#" class="hover:text-teal-300 transition duration-300">LinkedIn</a>
+        <a href="#" class="hover:text-teal-300 transition duration-300">Twitter</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
