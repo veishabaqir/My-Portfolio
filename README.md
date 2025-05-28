@@ -67,5 +67,6 @@ I'm always open to new opportunities, collaborations, and discussions. Feel free
 * **GitHub:** [https://github.com/veishabaqir](https://github.com/veishabaqir)
 * **LinkedIn:** [http://linkedin.com/in/veisha-bakir-aa794130a](http://linkedin.com/in/veisha-bakir-aa794130a)
 * **Email:** veishabaqir@gmail.com
+* **Medium** https://medium.com/@veishabakir
 
 ---
